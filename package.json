@@ -1,5 +1,5 @@
 {
-  "name": "hass",
+  "name": "hass-integrations",
   "version": "1.0.0",
   "description": "Home assistant custom Integrations",
   "author": "Sergey <itsib.su@gmail.com>",
@@ -13,7 +13,10 @@
   "scripts": {
     "build": "npm run build --workspaces",
     "build:prod": "npm run build:prod --workspaces",
-    "lint": "npm run lint --workspaces"
+    "lint": "npm run lint --workspaces",
+    "add": "git submodule foreach 'git add .'",
+    "commit": "git submodule foreach 'git commit -m \"AUTOCOMMIT\"'",
+    "push": "git submodule foreach 'git push'"
   },
   "devDependencies": {
     "@rollup/plugin-babel": "^6.0.4",
