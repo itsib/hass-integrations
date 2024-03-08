@@ -1,0 +1,71 @@
+homeassistant:
+  name: Мой Дом
+  temperature_unit: C
+  time_zone: Asia/Krasnoyarsk
+  unit_system: metric
+  country: RU
+
+#assist_pipeline:
+bluetooth:
+#cloud:
+#conversation:
+dhcp:
+#energy:
+history:
+homeassistant_alerts:
+logbook:
+logger:
+  default: warning
+  logs:
+    custom_components.air_quality: info
+    custom_components.yandex_player: info
+    custom_components.lovelace_cards: info
+    custom_components.virtual: info
+map:
+media_source:
+#mobile_app:
+my:
+ssdp:
+stream:
+sun:
+usb:
+webhook:
+zeroconf:
+
+virtual:
+  set_available: true
+
+switch:
+  - platform: virtual
+    name: "!Super Switch"
+    initial_value: 'off'
+
+light:
+  - platform: virtual
+    name: "!Room Main Light"
+    initial_value: 'off'
+    support_brightness: true
+    initial_brightness: 50
+#    support_color: true
+#    initial_color: [ 0,255 ]
+    support_color_temp: true
+    initial_color_temp: 255
+#    support_white_value: true
+#    initial_white_value: 240
+
+
+sensor:
+  - platform: virtual
+    name: "!Room Temperature"
+    class: temperature
+    initial_value: 21
+    unit_of_measurement: 'C'
+  - platform: virtual
+    name: "!Room Humidity"
+    class: humidity
+    initial_value: 63
+    unit_of_measurement: '%'
+
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml

@@ -1,0 +1,5 @@
+version: 1
+devices:
+  - platform: virtual
+    name: "!Super Switch"
+    initial_value: 'on'

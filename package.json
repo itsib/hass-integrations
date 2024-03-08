@@ -1,0 +1,30 @@
+{
+  "name": "hass",
+  "version": "1.0.0",
+  "description": "Home assistant custom Integrations",
+  "author": "Sergey <itsib.su@gmail.com>",
+  "license": "ISC",
+  "type": "module",
+  "workspaces": [
+    "packages/air-quality",
+    "packages/lovelace-cards",
+    "packages/yandex-player"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces",
+    "build:prod": "npm run build:prod --workspaces",
+    "lint": "npm run lint --workspaces"
+  },
+  "devDependencies": {
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "rollup": "^4.12.1",
+    "rollup-plugin-copy": "^3.5.0",
+    "rollup-plugin-delete": "^2.0.0",
+    "typescript": "5.3.3"
+  }
+}

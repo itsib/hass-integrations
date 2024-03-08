@@ -1,0 +1,11 @@
+[submodule "air-quality"]
+	path = packages/air-quality
+	url = https://github.com/itsib/air-quality-hacs.git
+
+[submodule "lovelace-cards"]
+	path = packages/lovelace-cards
+	url = https://github.com/itsib/lovelace-cards.git
+
+[submodule "yandex-player"]
+	path = packages/yandex-player
+	url = https://github.com/itsib/yandex-media-player.git
